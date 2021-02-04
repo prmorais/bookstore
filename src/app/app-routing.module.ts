@@ -15,6 +15,11 @@ import {LivroReadComponent} from "./components/views/livro/livro-read/livro-read
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
     component: HomeComponent
   },
   {
@@ -52,7 +57,7 @@ const routes: Routes = [
   {
     path: 'categorias/:id_cat/livros/:id/read',
     component: LivroReadComponent
-  }
+  },
 ];
 
 @NgModule({
