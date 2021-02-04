@@ -1,0 +1,49 @@
+<ng-template [ngIf]="!load" [ngIfElse]="formulario">
+  <h4>Buscando dados...</h4>
+</ng-template>
+
+<ng-template #formulario>
+
+  <form>
+    <h1>Atualizando Categoria</h1>
+
+    <mat-form-field class="form">
+      <mat-label>NOME</mat-label>
+      <label>
+        <input
+          [(ngModel)]="categoria.nome"
+          matInput
+          type="text"
+          name="nome"/>
+      </label>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+      <mat-label>DESCRIÇÃO</mat-label>
+      <label>
+      <textarea
+        [(ngModel)]="categoria.descricao"
+        matInput
+        type="text"
+        name="descricao">
+      </textarea>
+      </label>
+    </mat-form-field>
+
+    <div class="buttons">
+      <button
+        (click)="update()"
+        mat-stroked-button color="primary"
+        class="mat-elevation-z8"
+        style="margin-right: .5rem">
+        Atualizar
+      </button>
+      <button
+        (click)="cancel()"
+        mat-stroked-button color="accent"
+        class="mat-elevation-z8">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</ng-template>

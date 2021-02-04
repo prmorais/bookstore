@@ -1,0 +1,30 @@
+form {
+  width: 90%;
+  margin: auto;
+}
+
+mat-card {
+  margin: 1rem;
+}
+
+mat-card-title{
+  text-align: center;
+}
+
+mat-card-subtitle{
+  text-align: center;
+}
+
+mat-card-content{
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+h4 {
+  font-weight: initial;
+  margin: 1rem 0 0 7rem;
+}
+
+button {
+  width: 100%;
+}

@@ -1,0 +1,60 @@
+<ng-template [ngIf]="!load" [ngIfElse]="frmDelete">
+  <h4>Buscando dados...</h4>
+</ng-template>
+
+<ng-template #frmDelete>
+  <form [formGroup]="formulario">
+    <h1>Removendo Livro</h1>
+
+    <mat-form-field class="form">
+      <mat-label>TÍTULO</mat-label>
+      <label>
+        <input
+          formControlName="titulo"
+          matInput
+          type="text"
+          maxlength="100"/>
+      </label>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+      <mat-label>NOME DO AUTOR</mat-label>
+      <label>
+        <input
+          formControlName="nome_autor"
+          matInput
+          type="text"
+          maxlength="100"/>
+      </label>
+    </mat-form-field>
+
+    <mat-form-field class="form">
+      <mat-label>TEXTO</mat-label>
+      <label>
+      <textarea
+        formControlName="texto"
+        matInput
+        type="text"
+        maxlength="2000000">
+      </textarea>
+      </label>
+    </mat-form-field>
+
+    <div class="buttons">
+      <button
+        (click)="delete()"
+        mat-stroked-button
+        class="mat-elevation-z8"
+        style="margin-right: .5rem; color: crimson">
+        Remover
+      </button>
+      <button
+        (click)="cancel()"
+        mat-stroked-button color="accent"
+        class="mat-elevation-z8">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</ng-template>
+

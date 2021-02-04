@@ -1,0 +1,18 @@
+0000000000000000000000000000000000000000 d512e57da5edc09fa351ef1dc57e088f69df73b8 Paulo Roberto <prmorais1302@gmail.com> 1612112247 -0300	clone: from https://github.com/prmorais/bookestore-front.git
+d512e57da5edc09fa351ef1dc57e088f69df73b8 d16e21b8c256b4adfb30c01e53eb069267216d42 Paulo Roberto <prmorais1302@gmail.com> 1612113555 -0300	commit: Concluindo componente Header
+d16e21b8c256b4adfb30c01e53eb069267216d42 a208db39207ebf0598c3eeda38e38cfeda4a635b Paulo Roberto <prmorais1302@gmail.com> 1612114404 -0300	commit: Adicionando componente Footer
+a208db39207ebf0598c3eeda38e38cfeda4a635b fbce747ad7da8a6487aaed927910c2d2a387c591 Paulo Roberto <prmorais1302@gmail.com> 1612117256 -0300	commit: Adicionando componente Nav para o menu
+fbce747ad7da8a6487aaed927910c2d2a387c591 c48d8358127c2f09e798f840c40ee71fc3bf206c Paulo Roberto <prmorais1302@gmail.com> 1612118997 -0300	commit: Adicionando rota e componente para Home
+c48d8358127c2f09e798f840c40ee71fc3bf206c 118d1e0443e32c2f53cc2498ae59f05420a4b87c Paulo Roberto <prmorais1302@gmail.com> 1612125932 -0300	commit: Implementando componente CategoriaRead e listando dados
+118d1e0443e32c2f53cc2498ae59f05420a4b87c 7a313ade0743ff6271dae59df6799805acd231a4 Paulo Roberto <prmorais1302@gmail.com> 1612129095 -0300	commit: Ajustando componente CategoriaRead e adicionando botão nova categoria
+7a313ade0743ff6271dae59df6799805acd231a4 4cbfb592edb83d876f8566de8fe1a3951bc70b90 Paulo Roberto <prmorais1302@gmail.com> 1612134758 -0300	commit: Ajustando componente CategoriaCreate
+4cbfb592edb83d876f8566de8fe1a3951bc70b90 6b7bb60f5d16967d271ee57dcffbbae73dd9d2ec Paulo Roberto <prmorais1302@gmail.com> 1612144246 -0300	commit: Implementando metodo para salvar categoria
+6b7bb60f5d16967d271ee57dcffbbae73dd9d2ec d83908a19192d225ccfc9d1fcf84eca353a8fd1a Paulo Roberto <prmorais1302@gmail.com> 1612144555 -0300	commit: Implementando metodo cancelar para categoria
+d83908a19192d225ccfc9d1fcf84eca353a8fd1a bad2460edecefc5efbf233b0331a4396ca8be344 Paulo Roberto <prmorais1302@gmail.com> 1612190232 -0300	commit: Implementando componente CategoriaDelete e suas funcionalidades
+bad2460edecefc5efbf233b0331a4396ca8be344 0b85106d752693b3159bd91c233e05e535e3b124 Paulo Roberto <prmorais1302@gmail.com> 1612206085 -0300	commit: Implementando componente CategoriaUpdate e suas funcionalidades
+0b85106d752693b3159bd91c233e05e535e3b124 51a1b6329955825fcdd68b7ac4a102db694ed57b Paulo Roberto <prmorais1302@gmail.com> 1612206448 -0300	commit (amend): Implementando componente CategoriaUpdate e suas funcionalidades
+51a1b6329955825fcdd68b7ac4a102db694ed57b 497db4dba7acb399e2c8633b2f276781e6015cea Paulo Roberto <prmorais1302@gmail.com> 1612222747 -0300	commit: Implementando componente LivroReadAll e suas funcionalidades
+497db4dba7acb399e2c8633b2f276781e6015cea f8031b9397e11bafc6871a0c8b8b54e8ff8b2c6a Paulo Roberto <prmorais1302@gmail.com> 1612325133 -0300	commit: Implementando componente LivroCreate com reactive forms, validacao e metodo salvar
+f8031b9397e11bafc6871a0c8b8b54e8ff8b2c6a 4458ef0e8ad87c021227397d95d8db52d7ce5302 Paulo Roberto <prmorais1302@gmail.com> 1612326040 -0300	commit: Corrigindo o componente LivroCreate
+4458ef0e8ad87c021227397d95d8db52d7ce5302 feb21b80d6da81dbe944884277a4682dd3935dc2 Paulo Roberto <prmorais1302@gmail.com> 1612374407 -0300	commit: Refatoração no codigo de validacao dos campos no componente LivroCreate
+feb21b80d6da81dbe944884277a4682dd3935dc2 c9dfaa4d4534e6b0c838a1252c17cf1e55aa5e95 Paulo Roberto <prmorais1302@gmail.com> 1612390526 -0300	commit: Implmentando os componentes LivroUpdate e LivroDelete com suas funcionalidades
