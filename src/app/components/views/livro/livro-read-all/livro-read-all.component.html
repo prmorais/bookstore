@@ -61,7 +61,8 @@
             <a routerLink="{{row.id}}/update" style="color: #4c4ced">
               <i class="material-icons">edit</i>
             </a>
-            <a routerLink="{{row.id}}/delete" style="margin-left: 1rem; color: #dc143c">
+<!--            <a routerLink="{{row.id}}/delete" style="margin-left: 1rem; color: #dc143c">-->
+            <a (click)="openDialog(row.id)" style="margin-left: 1rem; color: #dc143c">
               <i class="material-icons">delete</i>
             </a>
           </td>
@@ -72,5 +73,6 @@
       </table>
     </ng-template>
   </ng-template>
+
 </div>
 

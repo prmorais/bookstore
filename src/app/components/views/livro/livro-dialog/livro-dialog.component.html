@@ -1,0 +1,11 @@
+<!--  Dialog-->
+<div>
+  <h1 mat-dialog-title>Removendo livro</h1>
+  <div mat-dialog-content>
+    <p>Deseja remover o livro {{livro.titulo.toUpperCase()}}?</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()" cdkFocusInitial >Não</button>
+    <button mat-button (click)="delete()">Sim</button>
+  </div>
+</div>

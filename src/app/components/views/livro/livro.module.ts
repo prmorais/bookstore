@@ -10,6 +10,7 @@ import {LivroUpdateComponent} from "./livro-update/livro-update.component";
 import {LivroDeleteComponent} from "./livro-delete/livro-delete.component";
 import {LivroReadComponent} from "./livro-read/livro-read.component";
 import {LivroRoutingModule} from "./livro-routing.module";
+import { LivroDialogComponent } from './livro-dialog/livro-dialog.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +19,13 @@ import {LivroRoutingModule} from "./livro-routing.module";
     LivroUpdateComponent,
     LivroDeleteComponent,
     LivroReadComponent,
+    LivroDialogComponent,
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     LivroRoutingModule,
-    ShareModule
+    ShareModule,
   ]
 })
 export class LivroModule { }

@@ -1,14 +1,14 @@
 form {
   text-align: center;
   width: 70%;
-  margin: 2rem auto 0 auto;
+  margin: 0 auto 0 auto;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: initial;
-  margin-bottom: 3rem;
-  color:darkgreen;
+  margin-bottom: 1rem;
+  color: #4c4ced;
 }
 
 h4 {
