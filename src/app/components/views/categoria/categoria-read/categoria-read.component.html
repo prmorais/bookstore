@@ -1,23 +1,23 @@
 <!--suppress ALL -->
 <div class="content">
-  <div class="title">
-    <h1>Categorias</h1>
-  </div>
 
   <ng-template [ngIf]="!load" [ngIfElse]="tabela">
     <h4>Buscando categorias...</h4>
   </ng-template>
 
-  <ng-template #tabela >
-    <button
-      (click)="novaCategoria()"
-      mat-stroked-button
-      class="mat-elevation-z8"
-      style="margin-bottom: 1rem;
-        color: darkgreen;
-        font-weight: initial">
-      Nova Categoria
-    </button>
+  <ng-template #tabela>
+    <div class="header">
+      <button
+        (click)="novaCategoria()"
+        mat-stroked-button
+        class="mat-elevation-z8"
+        style="color: darkgreen;
+        font-weight: initial;">
+        Nova Categoria
+      </button>
+
+      <h1>Categorias</h1>
+    </div>
     <table mat-table class="mat-elevation-z8 content-table table" [dataSource]="categorias">
       <!-- ID Column -->
       <ng-container matColumnDef="id">
@@ -41,7 +41,7 @@
       <ng-container matColumnDef="livros">
         <th mat-header-cell *matHeaderCellDef> LIVROS </th>
         <td mat-cell *matCellDef="let row">
-          <a routerLink="{{row.id}}/livros" style="margin-left: .5rem">
+          <a [routerLink]="[row.id,'livros']" style="margin-left: .5rem">
             <i style="color: #f4723e" class="material-icons">book</i>
           </a>
         </td>
@@ -51,10 +51,10 @@
       <ng-container matColumnDef="acoes">
         <th class="mat-header-acoes" mat-header-cell *matHeaderCellDef> AÇÕES </th>
         <td mat-cell *matCellDef="let row">
-          <a routerLink="update/{{row.id}}" style="color: #4c4ced">
+          <a [routerLink]="['update', row.id]" style="color: #4c4ced">
             <i class="material-icons">edit</i>
           </a>
-          <a routerLink="delete/{{row.id}}" style="margin-left: 1rem; color: #dc143c" >
+          <a [routerLink]="['delete', row.id]" style="margin-left: 1rem; color: #dc143c" >
             <i class="material-icons">delete</i>
           </a>
         </td>

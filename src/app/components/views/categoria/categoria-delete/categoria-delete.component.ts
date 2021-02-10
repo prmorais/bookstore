@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {CategoriaService} from "../categoria.service";
-import {CategoriaModel} from "../categoria.model";
+import {CategoriaService} from "../service/categoria.service";
+import {CategoriaModel} from "../model/categoria.model";
+import {patchTsGetExpandoInitializer} from "@angular/compiler-cli/ngcc/src/packages/patch_ts_expando_initializer";
 
 @Component({
   selector: 'app-categoria-delete',

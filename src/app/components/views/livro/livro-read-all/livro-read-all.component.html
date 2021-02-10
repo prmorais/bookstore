@@ -1,24 +1,24 @@
 <!--suppress ALL -->
 <div class="content">
-  <div class="title">
-    <h1>Livros por categoria</h1>
-  </div>
 
   <ng-template [ngIf]="!load" [ngIfElse]="buttonAndTabela">
     <h4>Buscando livros...</h4>
   </ng-template>
 
   <ng-template #buttonAndTabela >
+  <div class="header">
     <button
       (click)="adicionarLivro()"
       mat-stroked-button
       class="mat-elevation-z8"
-      style="margin-bottom: 1rem;
-        color: darkgreen;
+      style="color: darkgreen;
+        height: 2.5rem;
         font-weight: initial">
       Adicionar Livro
     </button>
 
+    <h1>LIVROS DE {{nomeCategoria.toLocaleUpperCase()}}</h1>
+  </div>
     <ng-template [ngIf]="livros.length === 0" [ngIfElse]="tabela">
       <h3>Não há livros para esta categoria. Adicione um ou clique <a [routerLink]="['/categorias']">aqui</a>
         para escolher outra Categoria...</h3>

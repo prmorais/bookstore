@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {LivroModel} from "../livro.model";
-import {LivroService} from "../livro.service";
+import {LivroModel} from "../model/livro.model";
+import {LivroService} from "../service/livro.service";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {validaCampos, validaCampoTouched} from "../utils";
 

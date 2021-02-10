@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {CategoriaModel} from "./categoria.model";
-import {environment} from "../../../../environments/environment";
+import {CategoriaModel} from "../model/categoria.model";
+import {environment} from "../../../../../environments/environment";
 import {MatSnackBar} from "@angular/material/snack-bar";
+import {CategoriaNomeDTO} from "../model/categoria-nome-dto";
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +22,11 @@ export class CategoriaService {
   findCategoriaById(id: string): Observable<CategoriaModel> {
     const url = `${this.baseUrl}/${id}`
     return this.http.get<CategoriaModel>(url);
+  };
+
+  findNomeCategoria(id_cat: string): Observable<CategoriaNomeDTO> {
+    const url = `${this.baseUrl}/nome/${id_cat}`
+    return this.http.get<CategoriaNomeDTO>(url);
   };
 
   create(categoria: CategoriaModel): Observable<CategoriaModel> {
