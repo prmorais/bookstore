@@ -3,14 +3,8 @@
   margin: 1.4rem auto auto auto;
 }
 
-.header {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: .5rem;
-}
-
-.header h1 {
-  margin: 0 32rem;
+h1 {
+  text-align: center;
   font-size: 1.5rem;
   font-weight: initial;
   color: #4c4ced;

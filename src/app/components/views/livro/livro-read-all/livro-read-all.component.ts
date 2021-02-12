@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {LivroModel} from "../model/livro.model";
 import {ActivatedRoute, Router} from "@angular/router";
 import {LivroService} from "../service/livro.service";
@@ -14,7 +14,6 @@ import {LivroDialogComponent} from "../livro-dialog/livro-dialog.component";
 export class LivroReadAllComponent implements OnInit {
 
   id_cat: string = '';
-
   nomeCategoria: string = '';
   load: boolean = false;
   livros: LivroModel[] = [];
@@ -25,7 +24,8 @@ export class LivroReadAllComponent implements OnInit {
     private catService: CategoriaService,
     private activatedRoute: ActivatedRoute,
     private route: Router,
-    private dialog: MatDialog) { }
+    private dialog: MatDialog) {
+  }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => this.id_cat = params['id_cat']);
@@ -43,22 +43,25 @@ export class LivroReadAllComponent implements OnInit {
 
   findNomeCategoria(): void {
     this.catService.findNomeCategoria(this.id_cat)
-      .subscribe(data =>  this.nomeCategoria = data.nome, error => console.log(error));
+      .subscribe(data => this.nomeCategoria = data.nome, error => console.log(error));
   };
 
   adicionarLivro(): void {
-    this.route.navigate([`categorias/${this.id_cat}/livros/create`]);
+    this.route.navigate([`categorias/${this.id_cat}/livros/create`]).then();
   };
 
-  openDialog(id_livro: string): void {
+  openDialog(livro: LivroModel): void {
     const dialogRef = this.dialog.open(LivroDialogComponent, {
-      width: '350px',
-      data: { id_livro: id_livro, id_cat: this.id_cat }
+      width: '450px',
+      data: {
+        livro,
+        message: `Deseja remover o livro ${livro.titulo.toUpperCase()}?`
+      }
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+    dialogRef.afterClosed().subscribe((result) => {
       this.findLivrosByCategoria();
     });
-  }
+  };
+
 }

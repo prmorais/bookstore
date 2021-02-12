@@ -6,18 +6,17 @@
   </ng-template>
 
   <ng-template #tabela>
-    <div class="header">
+      <h1>Categorias</h1>
+
       <button
         (click)="novaCategoria()"
         mat-stroked-button
         class="mat-elevation-z8"
         style="color: darkgreen;
-        font-weight: initial;">
-        Nova Categoria
+        margin-bottom: 1rem">
+        Adicionar Categoria
       </button>
 
-      <h1>Categorias</h1>
-    </div>
     <table mat-table class="mat-elevation-z8 content-table table" [dataSource]="categorias">
       <!-- ID Column -->
       <ng-container matColumnDef="id">
@@ -51,11 +50,17 @@
       <ng-container matColumnDef="acoes">
         <th class="mat-header-acoes" mat-header-cell *matHeaderCellDef> AÇÕES </th>
         <td mat-cell *matCellDef="let row">
-          <a [routerLink]="['update', row.id]" style="color: #4c4ced">
-            <i class="material-icons">edit</i>
+          <a mat-icon-button
+             [routerLink]="['update', row.id]"
+             style="color: #4c4ced"
+          >
+            <mat-icon>edit</mat-icon>
           </a>
-          <a [routerLink]="['delete', row.id]" style="margin-left: 1rem; color: #dc143c" >
-            <i class="material-icons">delete</i>
+          <a mat-icon-button
+            (click)="openDialog(row)"
+             style="color: #dc143c"
+          >
+            <mat-icon>delete</mat-icon>
           </a>
         </td>
       </ng-container>

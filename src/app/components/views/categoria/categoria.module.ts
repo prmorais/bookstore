@@ -9,6 +9,7 @@ import {CategoriaReadComponent} from "./categoria-read/categoria-read.component"
 import {CategoriaCreateComponent} from "./categoria-create/categoria-create.component";
 import {CategoriaDeleteComponent} from "./categoria-delete/categoria-delete.component";
 import {CategoriaUpdateComponent} from "./categoria-update/categoria-update.component";
+import {CategoriaDialogComponent} from "./categoria-dialog/categoria-dialog.component";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {CategoriaUpdateComponent} from "./categoria-update/categoria-update.comp
     CategoriaCreateComponent,
     CategoriaDeleteComponent,
     CategoriaUpdateComponent,
+    CategoriaDialogComponent,
   ],
   imports: [
     CommonModule,
